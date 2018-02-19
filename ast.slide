@@ -1,0 +1,45 @@
+AST Fun
+I'll make this ast fun ast I can
+Tags: go, golang, gopher, meetup
+
+Rob Reid
+Go Engineer, LUSH
+robert.reid@lush.co.uk
+http://robreid.io
+@go_robreid
+
+* What it does
+
+Tokenises your code into its component parts:
+
+        if a > 4 {
+                fmt.Println("greater than 4")
+        }
+
+Becomes:
+
+        *ast.IfStmt           (if)
+        *ast.BinaryExpr       (a > 4)
+        *ast.Ident            (a)
+        *ast.BasicLit         (4)
+        *ast.BlockStmt        (...)
+        *ast.ExprStmt         (...)
+        *ast.CallExpr         (...)
+        *ast.SelectorExpr     (...)
+        *ast.Ident            (fmt)
+        *ast.Ident            (Println)
+        *ast.BasicLit         ("greater than 4")
+
+* What it allows _you_ to do
+
+Create tools!
+
+- golint
+- errcheck
+- gocyclo
+- gosimple
+- goimports
+- ineffassign
+- interfacer
+
+* Let's code!
