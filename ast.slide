@@ -30,7 +30,7 @@ Becomes:
         *ast.Ident            (Println)
         *ast.BasicLit         ("greater than 4")
 
-* What it allows _you_ to do
+* What it allows you to do
 
 Create tools!
 
